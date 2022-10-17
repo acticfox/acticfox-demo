@@ -10,14 +10,14 @@
 	<url>http://maven.apache.org</url>
 
 	<parent>
-		<groupId>com.github.acticfox</groupId>
+		<groupId>io.github.acticfox</groupId>
 		<artifactId>acticfox-demo</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.github.acticfox</groupId>
+			<groupId>io.github.acticfox</groupId>
 			<artifactId>example-api</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>

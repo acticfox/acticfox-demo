@@ -6,7 +6,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 <!-- 存放手写的sql -->
 <mapper namespace="Student-manual" >
 
-	<cache type="com.github.acticfox.mybatis.plugin.cache.redis.MybatisRedisCache"/>
+	<cache type="io.github.acticfox.mybatis.plugin.cache.redis.MybatisRedisCache"/>
 	
 	<delete id="deleteByStudentNo" parameterType="java.lang.String" >
     <![CDATA[
