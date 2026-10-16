@@ -25,11 +25,32 @@
 			<groupId>io.github.acticfox</groupId>
 			<artifactId>service-filter</artifactId>
 			<version>${acticfox-version}</version>
+			<exclusions>
+				<!-- service-filter still depends on Dubbo 2.7 and spring-cloud-starter-dubbo, which do not run on Boot 3. -->
+				<exclusion>
+					<groupId>org.apache.dubbo</groupId>
+					<artifactId>dubbo</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.alibaba.cloud</groupId>
+					<artifactId>spring-cloud-starter-dubbo</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>io.github.acticfox</groupId>
 			<artifactId>mybatis-sharding</artifactId>
 			<version>${acticfox-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.alibaba</groupId>
+					<artifactId>druid</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>io.github.acticfox</groupId>
@@ -38,6 +59,16 @@
 		<dependency>
 			<groupId>io.github.acticfox</groupId>
 			<artifactId>mybatis-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.alibaba</groupId>
+					<artifactId>druid-spring-boot-starter</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
