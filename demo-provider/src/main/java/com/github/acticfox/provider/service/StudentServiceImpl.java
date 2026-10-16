@@ -3,7 +3,7 @@
  */
 package com.github.acticfox.provider.service;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.apache.dubbo.config.annotation.DubboService;
 

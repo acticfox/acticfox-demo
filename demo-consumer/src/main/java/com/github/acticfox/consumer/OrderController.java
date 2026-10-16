@@ -2,7 +2,7 @@ package com.github.acticfox.consumer;
 
 import java.util.Random;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
