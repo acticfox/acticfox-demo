@@ -52,8 +52,19 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-dubbo</artifactId>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+		<!-- spring-cloud-starter-dubbo stopped at Boot 2; Dubbo 3.3 is the Boot 3 replacement. -->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<version>${dubbo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-nacos-spring-boot-starter</artifactId>
+			<version>${dubbo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
@@ -69,18 +80,17 @@
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
-			<artifactId>druid-spring-boot-starter</artifactId>
-			<version>1.2.8</version>
+			<artifactId>druid-spring-boot-3-starter</artifactId>
+			<version>1.2.28</version>
 		</dependency>
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.47</version>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.24</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -90,7 +100,7 @@
 		<dependency>
 			<groupId>org.apache.skywalking</groupId>
 			<artifactId>apm-toolkit-logback-1.x</artifactId>
-			<version>8.11.0</version>
+			<version>9.8.0</version>
 		</dependency>
 	</dependencies>
 

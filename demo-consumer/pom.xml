@@ -30,8 +30,19 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-dubbo</artifactId>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+		<!-- spring-cloud-starter-dubbo stopped at Boot 2; Dubbo 3.3 is the Boot 3 replacement. -->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<version>${dubbo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-nacos-spring-boot-starter</artifactId>
+			<version>${dubbo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
@@ -44,7 +55,6 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.24</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
